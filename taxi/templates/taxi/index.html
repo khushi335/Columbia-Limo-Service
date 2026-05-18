@@ -1,0 +1,1078 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Airport Car Service{% endblock %}
+
+{% block content %}
+
+
+<section class="hero-premium-section" aria-label="Columbia Limousine Service - Premium Airport Transportation">
+    <!-- Carousel Background Canvas (Edge to Edge) -->
+    <div class="hero-carousel" aria-hidden="true">
+        <!-- Slide 1 (Active by default) -->
+        <div class="carousel-slide active">
+            <img src="{% static 'img/BWI-01.jpg' %}" alt="Luxury Sedan Airport Car Service in Columbia MD to BWI" class="hero-bg-img">
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <img src="{% static 'img/BWI-02.jpg' %}" alt="Premium SUV Corporate Transportation Columbia Maryland" class="hero-bg-img">
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+            <img src="{% static 'img/BWI-03.jpg' %}" alt="Columbia MD Luxury Sprinter Van Rental and Chauffeur Service" class="hero-bg-img">
+        </div>
+    </div>
+
+    <!-- Vignette Shielding for Complete Readability -->
+    <div class="hero-dark-overlay"></div>
+
+    <!-- Foreground Content Layer -->
+    <div class="hero-inner-content">
+        <header class="hero-text-wrapper">
+            <p class="hero-location-tag">Columbia MD • Baltimore • Washington DC • Howard County</p>
+            <h1 class="hero-main-title">
+                Columbia MD Airport <span class="gold-gradient-text">Car Service</span>
+            </h1>
+            <div class="hero-description-card">
+                <p class="white-text">
+                    Welcome to <strong>Columbia Limousine Service</strong>, the premier choice for luxury airport transportation in Columbia, MD, and Howard County. We feature a private fleet of late-model luxury SUVs, sedans, and executive Sprinter Vans paired with a strict punctuality guarantee. Enjoy world-class, professional chauffeur services from Columbia, Maryland to BWI, Dulles (IAD), and Reagan National (DCA).
+                </p>
+            </div>
+        </header>
+        
+        <!-- Call to Action Anchors -->
+        <div class="hero-btn-group">
+            <a href="/booking/" class="btn-gold" aria-label="Book your Columbia MD airport car service online">BOOK ONLINE</a>
+            <a href="tel:+14438601286" class="btn-outline" aria-label="Call Columbia Limousine Service">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                CALL NOW
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!--<section class="booking-section-full">-->
+<!--    <img src="{% static 'img/bwi.jpeg' %}" alt="BWI Car Service" class="booking-bg-image">-->
+    
+<!--    <div class="booking-dark-overlay"></div>-->
+
+<!--    <div class="booking-container">-->
+<!--        <h2 class="form-title">Book Your Luxury Ride</h2>-->
+<!--        {% if messages %}-->
+<!--            {% for message in messages %}-->
+<!--                 <div class="alert alert-success">{{ message }}</div>-->
+<!--            {% endfor %}-->
+<!--        {% endif %}-->
+<!--        <form method="POST" action="{% url 'index' %}" class="luxury-form">-->
+<!--            {% csrf_token %}-->
+<!--            <input type="hidden" name="form_type" value="booking_form">-->
+            
+<!--            <div class="form-row">-->
+<!--                <div class="form-group">-->
+<!--                    <label>Full Name <span class="required">*</span></label>-->
+<!--                    <input type="text" name="name" placeholder="John Doe" required>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Email Address <span class="required">*</span></label>-->
+<!--                    <input type="email" name="email" placeholder="email@example.com" required>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-row">-->
+<!--                <div class="form-group">-->
+<!--                    <label>Date of Service <span class="required">*</span></label>-->
+<!--                    <input type="text" id="service_date" name="service_date" placeholder="Select Date" required>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Pick Up Time <span class="required">*</span></label>-->
+<!--                    <input type="text" id="pickup_time" name="pickup_time" placeholder="Choose Time" required>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-row">-->
+<!--                <div class="form-group">-->
+<!--                    <label>Pick Up Address <span class="required">*</span></label>-->
+<!--                    <input type="text" name="pickup_address" placeholder="Address, Airport, or Hotel" required>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Drop Off Location <span class="required">*</span></label>-->
+<!--                    <input type="text" name="dropoff_address" placeholder="Destination Address" required>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-row">-->
+<!--                <div class="form-group">-->
+<!--                    <label>Phone <span class="required">*</span></label>-->
+<!--                    <input type="tel" name="phone" placeholder="(000) 000-0000" required>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Company (Optional)</label>-->
+<!--                    <input type="text" name="company" placeholder="Company Name">-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-group full-width">-->
+<!--                <label>Special Notes (Flight #, Requests)</label>-->
+<!--                <textarea name="notes" rows="3" placeholder="Provide flight details or special requests here..."></textarea>-->
+<!--            </div>-->
+
+<!--            <button type="submit" class="btn-quote">GET QUOTE & BOOK</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</section>-->
+
+<section class="bwi-about-section">
+    <div class="bwi-about-container">
+        
+        <header class="bwi-about-header">
+            <h1 class="bwi-main-title">Trusted Airport Car Service at BWI Airport since 2006</h1>
+            <div class="gold-divider"></div>
+            <p class="bwi-main-subtitle">Book Spacious Sedan, Large SUV or Luxury Sprinter Van</p>
+        </header>
+
+        <div class="bwi-flex-layout">
+            <div class="bwi-stats-side">
+                <div class="stats-overlay"></div>
+                <div class="stat-content-wrapper">
+                    <div class="stat-item">
+                        <span class="stat-number">2006</span>
+                        <span class="stat-label">Established</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Min Arrival</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Availability</span>
+                    </div>
+                </div>
+            </div>
+
+            <article class="bwi-about-content">
+                <p class="drop-cap-p">Looking for a reliable luxury airport transfer to and from BWI Airport? <strong>Columbia Limousine Service</strong> is your premier luxury BWI airport car service, serving Baltimore, MD and the entire region. With our efficient fleet, we can reach you at Baltimore/Washington International Airport within 15 minutes, ready to fulfill your request no matter your landing time.</p>
+
+                <p>Don't risk wasting time with unreliable transportation. Trust our luxury airport car service to get you out of BWI safely and promptly. Pre-book your luxury BWI airport vehicle now for a hassle-free and punctual ride. We also offer <strong>BWI airport shuttle</strong> and <strong>BWI black car service</strong> options.</p>
+
+                <p>Why wait? Book your dependable luxury BWI airport transportation with us today. We provide convenient BWI car service, affordable Baltimore airport limousine service, elegant black car options, and world-class limousine services to destinations like Easton, Frederick, Arlington, and York. Reserve your luxury car service from BWI or Dulles Airport online now and savor a hassle-free journey.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="benefits-section">
+    <div class="benefits-container">
+        <header class="benefits-header">
+            <h2 class="benefits-main-title">Why You Should Book your Luxury BWI Airport Car Service Now</h2>
+            <div class="gold-accent-line"></div>
+        </header>
+
+        <div class="benefits-grid">
+            <article class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>Professional Chauffeurs</h3>
+                <p>Our BWI Airport drivers are reliable partners, rigorously trained and familiar with MD and DC routes for a safe journey.</p>
+                <ul class="benefit-list">
+                    <li>Background checked</li>
+                    <li>Professional training</li>
+                    <li>Local route expertise</li>
+                    <li>Excellent customer service</li>
+                </ul>
+            </article>
+
+            <article class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <h3>Fixed Rate Pricing</h3>
+                <p>Transparent pricing with no hidden fees or surge pricing. What you see is what you pay—guaranteed.</p>
+                <ul class="benefit-list">
+                    <li>No surge pricing</li>
+                    <li>No hidden fees</li>
+                    <li>All-inclusive rates</li>
+                    <li>Corporate discounts</li>
+                </ul>
+            </article>
+
+            <article class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-plane-arrival"></i></div>
+                <h3>Flight Tracking</h3>
+                <p>We monitor your flight in real-time and adjust pickup times automatically. No charges for delays.</p>
+                <ul class="benefit-list">
+                    <li>Real-time monitoring</li>
+                    <li>Automatic adjustments</li>
+                    <li>No delay charges</li>
+                    <li>Peace of mind</li>
+                </ul>
+            </article>
+
+            <article class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-car-rear"></i></div>
+                <h3>Luxury Fleet</h3>
+                <p>Late-model luxury vehicles maintained to the highest standards. Cleaned professionally before every trip.</p>
+                <ul class="benefit-list">
+                    <li>Late-model vehicles</li>
+                    <li>Regular maintenance</li>
+                    <li>Professional cleaning</li>
+                    <li>Multiple vehicle options</li>
+                </ul>
+            </article>
+
+            <article class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-headset"></i></div>
+                <h3>24/7 Service</h3>
+                <p>Round-the-clock availability for early flights or late arrivals. We are available 365 days a year.</p>
+                <ul class="benefit-list">
+                    <li>Always available</li>
+                    <li>Last-minute bookings</li>
+                    <li>Helpful dispatch team</li>
+                    <li>Emergency ride support</li>
+                </ul>
+            </article>
+
+            <article class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <h3>On Time Services</h3>
+                <p>Experience reliable coordination. Your professional chauffeur ensures a punctual pickup every time.</p>
+                <ul class="benefit-list">
+                    <li>Timely Curbside Meet-Up</li>
+                    <li>Efficient Luggage Handling</li>
+                    <li>Reliable BWI Arrival</li>
+                    <li>Early Morning Pickups</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="features-container">
+        
+        <div class="feature-card">
+            <div class="icon-circle">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <h2>24/7 Service</h2>
+            <p>Round-the-clock availability</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-circle">
+                <i class="fa-solid fa-tags"></i>
+            </div>
+            <h2>Fixed Rates</h2>
+            <p>No hidden fees</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-circle">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h2>On Time Services</h2>
+            <p>Unwavering commitment to punctuality</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-circle">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h2>Professional Chauffeurs</h2>
+            <p>Highly skilled, helpful drivers</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="airport-services-wide">
+    <div class="services-full-wrapper">
+        <header class="services-header">
+            <h2 class="services-title">Airport Transportation Services We Provide</h2>
+            <p class="services-subtitle">Serving all major Maryland airports with professional chauffeurs and luxury vehicles.</p>
+        </header>
+
+        <div class="services-grid-3">
+            <article class="service-box featured">
+                <div class="service-icon"><i class="fa-solid fa-plane-up"></i></div>
+                <h3>BWI Airport Car Service</h3>
+                <p>Reliable, door-to-door luxury transportation to and from Baltimore/Washington International (BWI).</p>
+            </article>
+
+            <article class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                <h3>Washington Dulles (IAD)</h3>
+                <p>Premium car service to and from Washington Dulles International Airport for global travelers.</p>
+            </article>
+
+            <article class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-landmark-dome"></i></div>
+                <h3>Reagan National (DCA)</h3>
+                <p>Private car service for business and leisure travel, ensuring timely arrivals at Reagan National.</p>
+            </article>
+
+            <article class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-clock"></i></div>
+                <h3>Hourly Charter Service</h3>
+                <p>Flexible hourly booking for meetings, events, or sightseeing with a dedicated personal chauffeur.</p>
+            </article>
+
+            <article class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3>Corporate Executive Travel</h3>
+                <p>Sophisticated black car solutions for business professionals and executive corporate accounts.</p>
+            </article>
+
+            <article class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-bus-simple"></i></div>
+                <h3>Luxury Group Fleet</h3>
+                <p>High-capacity Sprinter vans, SUVs, and Limousines for group airport transfers and special events.</p>
+            </article>
+        </div>
+
+        <footer class="services-footer">
+            <p><i class="fa-solid fa-shield-check"></i> 24/7 Availability for all Maryland, DC, and Virginia Airport Services.</p>
+        </footer>
+    </div>
+</section>
+
+<section class="premium-serve-section">
+    <div class="premium-container">
+        
+        <header class="premium-header">
+            <span class="top-label">Luxury Coverage</span>
+            <h2 class="premium-title">Areas We Serve</h2>
+            <p class="premium-subtitle">Our Dedicated BWI Airport Car Service will safely and conveniently drive you to your destination anywhere in Maryland and beyond.</p>
+            <div class="premium-divider"><span></span></div>
+        </header>
+
+        <div class="location-flex-wrapper">
+            <div class="serve-card">
+                <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h3>Maryland Cities</h3>
+                <div class="pills-container">
+                    <span>Baltimore</span><span>Annapolis</span><span>Columbia</span>
+                    <span>Frederick</span><span>Rockville</span><span>Gaithersburg</span>
+                    <span>Bethesda</span><span>Silver Spring</span><span>Towson</span>
+                    <span>Bowie</span><span>Ellicott City</span><span>Easton</span>
+                    <span>Hagerstown</span><span>Ocean City</span><span>Salisbury</span>
+                    <span>Laurel</span><span>Greenbelt</span><span>College Park</span>
+                </div>
+            </div>
+
+            <div class="serve-card">
+                <div class="card-icon"><i class="fa-solid fa-landmark"></i></div>
+                <h3>Washington DC</h3>
+                <div class="pills-container">
+                    <span>Downtown DC</span><span>Capitol Hill</span><span>Georgetown</span>
+                    <span>Dupont Circle</span><span>Foggy Bottom</span><span>Adams Morgan</span>
+                    <span>Navy Yard</span><span>NoMa</span>
+                </div>
+            </div>
+
+            <div class="serve-card">
+                <div class="card-icon"><i class="fa-solid fa-tree-city"></i></div>
+                <h3>Northern Virginia</h3>
+                <div class="pills-container">
+                    <span>Arlington</span><span>Alexandria</span><span>McLean</span>
+                    <span>Tysons Corner</span><span>Reston</span><span>Herndon</span>
+                    <span>Fairfax</span><span>Springfield</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="aviation-premium-banner">
+            <div class="aviation-inner">
+                <div class="aviation-text">
+                    <h4>Private Aviation Terminals</h4>
+                    <p>Exclusive car service to BWI private hangars and executive terminals.</p>
+                </div>
+                <div class="aviation-tags">
+                    <div class="tag-item"><i class="fa-solid fa-plane-up"></i> Signature Aviation</div>
+                    <div class="tag-item"><i class="fa-solid fa-plane-up"></i> Atlantic Aviation</div>
+                    <div class="tag-item"><i class="fa-solid fa-plane-up"></i> Private Jet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="fleet-section">
+    <header class="fleet-header">
+        <h2 class="fleet-main-title">Our BWI Car Service Fleet</h2>
+        <p class="fleet-intro">
+            As a top-rated Baltimore transportation provider, we specialize in reliable BWI airport Car Service transfers. Our impeccably maintained fleet includes Town Cars, SUVs, and Sprinter vans, ensuring a comfortable and professional ride for any group size.
+        </p>
+        <div class="fleet-divider"><span></span></div>
+    </header>
+
+    <div class="fleet-full-container">
+        <div class="fleet-grid">
+            <article class="vehicle-card">
+                <div class="vehicle-image-wrapper">
+                    <img src="{% static 'img/luxury_sedan.jpeg' %}" alt="Luxury Sedan BWI Car Service">
+                    <div class="vehicle-overlay-tag">Executive Sedan</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>Luxury Sedan</h3>
+                    <span class="vehicle-sub-tag">Executive Black Car Service</span>
+                    <div class="specs-box">
+                        <div class="spec-item"><i class="fa-solid fa-users"></i> 1-4 Pax</div>
+                        <div class="spec-item"><i class="fa-solid fa-suitcase-rolling"></i> 3-4 Bags</div>
+                    </div>
+                    <p class="perfect-for"><strong>Perfect for:</strong> Business travel, airport transfers, and executive transportation.</p>
+                    <!--<a href="#booking" class="fleet-btn">Reserve Now</a>-->
+                </div>
+            </article>
+
+            <article class="vehicle-card">
+                <div class="vehicle-image-wrapper">
+                    <img src="{% static 'img/premium_suv.png' %}" alt="Premium SUV BWI Car Service">
+                    <div class="vehicle-overlay-tag">Premium SUV</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>Premium SUV</h3>
+                    <span class="vehicle-sub-tag">Private SUV for Families & Groups</span>
+                    <div class="specs-box">
+                        <div class="spec-item"><i class="fa-solid fa-users"></i> 1-6 Pax</div>
+                        <div class="spec-item"><i class="fa-solid fa-suitcase-rolling"></i> 8 Bags</div>
+                    </div>
+                    <p class="perfect-for"><strong>Perfect for:</strong> Families, small groups, and travelers with extra luggage.</p>
+                    <!--<a href="#booking" class="fleet-btn">Reserve Now</a>-->
+                </div>
+            </article>
+
+            <article class="vehicle-card">
+                <div class="vehicle-image-wrapper">
+                    <img src="{% static 'img/sprinter_van.png' %}" alt="BWI Sprinter Van">
+                    <div class="vehicle-overlay-tag">Executive Van</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>Sprinter Van</h3>
+                    <span class="vehicle-sub-tag">BWI Group Transportation & Shuttle</span>
+                    <div class="specs-box">
+                        <div class="spec-item"><i class="fa-solid fa-users"></i> 14 Pax</div>
+                        <div class="spec-item"><i class="fa-solid fa-boxes-stacked"></i> High Capacity</div>
+                    </div>
+                    <p class="perfect-for"><strong>Perfect for:</strong> Corporate groups, events, and large family travel.</p>
+                    <!--<a href="#booking" class="fleet-btn">Reserve Now</a>-->
+                </div>
+            </article>
+
+            <article class="vehicle-card">
+                <div class="vehicle-image-wrapper">
+                    <img src="{% static 'img/limousine.jpg' %}" alt="Baltimore Limo Service">
+                    <div class="vehicle-overlay-tag">Luxury Limo</div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>Limousine</h3>
+                    <span class="vehicle-sub-tag">Weddings & Special Events</span>
+                    <div class="specs-box">
+                        <div class="spec-item"><i class="fa-solid fa-users"></i> 6-10 Pax</div>
+                        <div class="spec-item"><i class="fa-solid fa-champagne-glasses"></i> VIP Setup</div>
+                    </div>
+                    <p class="perfect-for"><strong>Perfect for:</strong> Weddings, special events, and VIP BWI transportation.</p>
+                    <!--<a href="#booking" class="fleet-btn">Reserve Now</a>-->
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<section class="services-matrix-section">
+    <div class="matrix-container">
+        
+        <header class="matrix-header">
+            <h2 class="matrix-title">Rated Best Luxury Car for BWI, IAD, DCA Airports</h2>
+            <p class="matrix-subtitle">Expect expert chauffeur services for every ride. We guarantee on-time service with helpful, professional drivers.</p>
+            <div class="matrix-divider"></div>
+        </header>
+
+        <div class="matrix-grid">
+            
+            <article class="service-box">
+                <div class="box-icon"><i class="fa-solid fa-city"></i></div>
+                <h3>BWI Airport to Washington DC</h3>
+                <ul class="check-list">
+                    <li>Luxury transportation</li>
+                    <li>Limo service</li>
+                    <li>Reliable transportation</li>
+                    <li>Private car service</li>
+                    <li>Flat rate car service</li>
+                    <li>Meet and greet service</li>
+                    <li>Guaranteed on-time pickup</li>
+                </ul>
+            </article>
+
+            <article class="service-box">
+                <div class="box-icon"><i class="fa-solid fa-shuttle-van"></i></div>
+                <h3>BWI Airport to Baltimore</h3>
+                <ul class="check-list">
+                    <li>Luxury car service</li>
+                    <li>Private car service</li>
+                    <li>Reliable transportation</li>
+                    <li>Executive transportation</li>
+                    <li>Corporate travel service</li>
+                    <li>Private jet ground transport</li>
+                </ul>
+            </article>
+
+            <article class="service-box">
+                <div class="box-icon"><i class="fa-solid fa-anchor"></i></div>
+                <h3>BWI Airport to Annapolis</h3>
+                <ul class="check-list">
+                    <li>Black Car Service</li>
+                    <li>Luxury car service</li>
+                    <li>Executive transportation</li>
+                    <li>Reliable transportation</li>
+                    <li>Corporate travel service</li>
+                    <li>Sedan, SUV, & Sprinter Vans</li>
+                </ul>
+            </article>
+
+            <article class="service-box">
+                <div class="box-icon"><i class="fa-solid fa-star"></i></div>
+                <h3>BWI Luxury Car Service</h3>
+                <ul class="check-list">
+                    <li>To all destinations</li>
+                    <li>Professional chauffeurs</li>
+                    <li>Corporate travel focus</li>
+                    <li>Flight tracking for arrivals</li>
+                    <li>Child car seats available</li>
+                    <li>Sedan, SUV, or Limousine</li>
+                </ul>
+            </article>
+
+            <article class="service-box">
+                <div class="box-icon"><i class="fa-solid fa-car-side"></i></div>
+                <h3>BWI Limousine Service</h3>
+                <ul class="check-list">
+                    <li>Airport transfers</li>
+                    <li>Group transportation</li>
+                    <li>Hour-by-hour charter</li>
+                    <li>VIP & executive clients</li>
+                    <li>Special events and dates</li>
+                </ul>
+            </article>
+
+            <article class="service-box">
+                <div class="box-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3>Corporate Transportation</h3>
+                <ul class="check-list">
+                    <li>To and from corporate offices</li>
+                    <li>Customized billing options</li>
+                    <li>Last-minute travel changes</li>
+                    <li>Executive assistant portal</li>
+                    <li>Luxury Black SUVs and vans</li>
+                </ul>
+            </article>
+
+            <article class="service-box">
+                <div class="box-icon"><i class="fa-solid fa-clock-check"></i></div>
+                <h3>Most Reliable Car Service</h3>
+                <ul class="check-list">
+                    <li>24/7 Availability</li>
+                    <li>Free waiting time (Arrivals)</li>
+                    <li>Real-time flight monitoring</li>
+                    <li>Early/Late-night arrivals</li>
+                    <li>Instant online booking</li>
+                    <li>Helpful, knowledgeable pros</li>
+                </ul>
+            </article>
+
+            <article class="service-box">
+                <div class="box-icon"><i class="fa-solid fa-users-gear"></i></div>
+                <h3>BWI SUV & Van Service</h3>
+                <ul class="check-list">
+                    <li>Group transport from BWI</li>
+                    <li>Ample luggage space</li>
+                    <li>Corporate team travel</li>
+                    <li>High-capacity comfort</li>
+                    <li>Family travel specialty</li>
+                    <li>BWI's Most Reliable Shuttle</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <div class="features-bar">
+            <h3 class="features-bar-title">BWI Service Features</h3>
+            <div class="features-scroll">
+                <div class="feat-item"><i class="fa-solid fa-baby"></i> Car Seats</div>
+                <div class="feat-item"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</div>
+                <div class="feat-item"><i class="fa-solid fa-bottle-water"></i> Bottled Water</div>
+                <div class="feat-item"><i class="fa-solid fa-plug"></i> Chargers</div>
+                <div class="feat-item"><i class="fa-solid fa-language"></i> Bilingual</div>
+                <div class="feat-item"><i class="fa-solid fa-headset"></i> 24/7 Support</div>
+                <div class="feat-item"><i class="fa-solid fa-credit-card"></i> Instant Pay</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="premium-faq-section">
+    <div class="faq-container">
+        
+        <header class="faq-header">
+            <span class="faq-pre-title">Customer Support</span>
+            <h2 class="faq-title">BWI Car Service FAQs</h2>
+            <p class="faq-subtitle">Find answers to common questions about our premium BWI airport transfers.</p>
+            <div class="faq-divider"><span></span></div>
+        </header>
+
+        <div class="faq-grid-wrapper">
+            
+            <details class="faq-item" open>
+                <summary class="faq-question">How does your BWI car service compare to taxis or ride-sharing apps?</summary>
+                <div class="faq-answer">
+                    <p>Our service provides a level of reliability and luxury that apps cannot match:</p>
+                    <ul class="faq-list">
+                        <li><strong>Professional chauffeurs:</strong> Background-checked and BWI-specialized.</li>
+                        <li><strong>Fixed rates:</strong> Zero surge pricing; you know the total upfront.</li>
+                        <li><strong>Flight tracking:</strong> We monitor your arrival in real-time.</li>
+                        <li><strong>Meet & greet:</strong> Your driver waits at baggage claim with a sign.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">How far in advance should I book BWI airport transportation?</summary>
+                <div class="faq-answer">
+                    <p>We recommend booking <strong>24-48 hours</strong> in advance for guaranteed vehicle selection. However, we often accommodate urgent requests with 2-3 hours notice based on current fleet availability.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">What happens if my flight is delayed or early?</summary>
+                <div class="faq-answer">
+                    <p>We track every flight. If you're late, we wait; if you're early, we're there. We include <strong>60 minutes of complimentary wait time</strong> for all domestic arrivals.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Do you provide child car seats?</summary>
+                <div class="faq-answer">
+                    <p>Yes. We provide safety-inspected rear-facing, forward-facing, and booster seats at <strong>no additional charge</strong>. Simply note the child's age and weight during your booking.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">What is your cancellation policy?</summary>
+                <div class="faq-answer">
+                    <p>Cancellations made <strong>24+ hours</strong> in advance receive a full refund. Cancellations within 4-24 hours incur a 50% fee. Less than 4 hours notice is considered a full charge.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Can you accommodate large groups?</summary>
+                <div class="faq-answer">
+                    <p>Absolutely. We specialize in high-capacity transport with <strong>6-pax SUVs</strong>, <strong>10-pax Vans</strong>, and <strong>14-pax Executive Sprinters</strong>.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Do you offer corporate accounts?</summary>
+                <div class="faq-answer">
+                    <p>Yes. Corporate partners benefit from <strong>10-15% discounts</strong>, consolidated monthly billing, and priority booking status for executive assistants.</p>
+                </div>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="routes-section">
+    <div class="routes-container">
+        
+        <header class="routes-header">
+            <h2 class="routes-title">Popular BWI Airport Car Service Routes</h2>
+            <p class="routes-subtitle">Our most requested car service from BWI Airport includes, but is not limited to:</p>
+            <div class="routes-underline"></div>
+        </header>
+
+        <div class="routes-grid">
+            
+            <div class="routes-column">
+                <h3 class="column-title"><i class="fa-solid fa-map-location-dot"></i> Maryland Routes</h3>
+                
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Baltimore</h4>
+                        <p>Inner Harbor, Fells Point, Downtown</p>
+                    </div>
+                    <a href="#" class="route-link">Book Baltimore Car Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Annapolis</h4>
+                        <p>Naval Academy, Historic District</p>
+                    </div>
+                    <a href="#" class="route-link">Book Annapolis Limo Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Columbia MD</h4>
+                        <p>Corporate centers, Columbia Town Center</p>
+                    </div>
+                    <a href="#" class="route-link">Book Columbia Car Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Rockville</h4>
+                        <p>Montgomery County, Corporate Parks</p>
+                    </div>
+                    <a href="#" class="route-link">Book Rockville Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Frederick</h4>
+                        <p>Historic Downtown, Corporate Centers</p>
+                    </div>
+                    <a href="#" class="route-link">Book Frederick Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div class="routes-column">
+                <h3 class="column-title"><i class="fa-solid fa-plane-arrival"></i> DC, Virginia & Beyond</h3>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Washington DC</h4>
+                        <p>Downtown, Georgetown, Capitol Hill</p>
+                    </div>
+                    <a href="#" class="route-link">Book DC Car Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Dulles (IAD) / Reagan (DCA)</h4>
+                        <p>Inter-airport transfers made easy</p>
+                    </div>
+                    <a href="#" class="route-link">Book Airport Transfer <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Northern Virginia</h4>
+                        <p>Arlington, Alexandria, Tysons Corner</p>
+                    </div>
+                    <a href="#" class="route-link">Book NOVA Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to York, PA</h4>
+                        <p>Reliable long-distance transportation</p>
+                    </div>
+                    <a href="#" class="route-link">Book York PA Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>BWI to Bethesda</h4>
+                        <p>NIH, Medical Centers</p>
+                    </div>
+                    <a href="#" class="route-link">Book Bethesda Service <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="routes-cta">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h3>Need another route?</h3>
+                    <p>Call our 24/7 team for an instant quote on any destination.</p>
+                </div>
+                <div class="cta-numbers">
+                    <a href="tel:(410) 365-5556" class="phone-link">
+                        <i class="fa-solid fa-phone-volume"></i> (410) 365-5556
+                    </a>
+                    <!--<a href="tel:2402106688" class="phone-link">-->
+                    <!--    <i class="fa-solid fa-phone-volume"></i> (240) 210-6688-->
+                    <!--</a>-->
+                </div>
+            </div>
+        </footer>
+        
+        
+<section class="fleet-slider-section">
+    <div class="fleet-container">
+        
+        <header class="fleet-header">
+            <span class="pre-title">Exclusive Transportation</span>
+            <h2 class="fleet-title">Our BWI Car Service Fleet</h2>
+            <p class="fleet-subtitle">Choose from our meticulously maintained fleet for your comfort and safety.</p>
+            <div class="fleet-underline"></div>
+        </header>
+
+        <div class="fleet-viewport">
+            <div class="fleet-track">
+                
+                <div class="fleet-slide">
+                    <div class="fleet-card-inner">
+                        <div class="fleet-image-box">
+                            <img src="{% static 'img/luxury_sedan.jpeg' %}" alt="Luxury Sedan">
+                        </div>
+                        <div class="fleet-details">
+                            <span class="fleet-label">Corporate Executive</span>
+                            <h3>Luxury Sedan</h3>
+                            <p>An elegant choice for individual travelers or business professionals. Experience quiet comfort and refined leather interiors.</p>
+                            <div class="fleet-perks">
+                                <span><i class="fa-solid fa-user-check"></i> 3-4 Pax</span>
+                                <span><i class="fa-solid fa-briefcase"></i> 2 Luggage</span>
+                            </div>
+                            <a href="#booking" class="fleet-action-btn">Book Executive Sedan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-slide">
+                    <div class="fleet-card-inner">
+                        <div class="fleet-image-box">
+                            <img src="{% static 'img/premium_suv.png' %}" alt="Premium SUV">
+                        </div>
+                        <div class="fleet-details">
+                            <span class="fleet-label">Family & Group</span>
+                            <h3>Executive SUV</h3>
+                            <p>Perfect for families or small teams requiring extra space and luggage capacity without compromising on style.</p>
+                            <div class="fleet-perks">
+                                <span><i class="fa-solid fa-user-check"></i> 6 Pax</span>
+                                <span><i class="fa-solid fa-suitcase-rolling"></i> 6 Luggage</span>
+                            </div>
+                            <a href="#booking" class="fleet-action-btn">Book Premium SUV</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-slide">
+                    <div class="fleet-card-inner">
+                        <div class="fleet-image-box">
+                            <img src="{% static 'img/limousine.jpg' %}" alt="Limousine">
+                        </div>
+                        <div class="fleet-details">
+                            <span class="fleet-label">VIP Experience</span>
+                            <h3>Stretch Limousine</h3>
+                            <p>The ultimate statement for weddings, galas, or high-profile arrivals. Features premium amenities and privacy partitions.</p>
+                            <div class="fleet-perks">
+                                <span><i class="fa-solid fa-user-check"></i> 8-10 Pax</span>
+                                <span><i class="fa-solid fa-glass-champagne"></i> VIP Amenities</span>
+                            </div>
+                            <a href="#booking" class="fleet-action-btn">Book Limousine</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-slide">
+                    <div class="fleet-card-inner">
+                        <div class="fleet-image-box">
+                            <img src="{% static 'img/sprinter_van.png' %}" alt="Sprinter Van">
+                        </div>
+                        <div class="fleet-details">
+                            <span class="fleet-label">Large Group Travel</span>
+                            <h3>Executive Van</h3>
+                            <p>The ideal solution for corporate groups or sports teams. High-roof ceilings and generous aisle space for maximum comfort.</p>
+                            <div class="fleet-perks">
+                                <span><i class="fa-solid fa-user-check"></i> 14 Pax</span>
+                                <span><i class="fa-solid fa-boxes-stacked"></i> High Capacity</span>
+                            </div>
+                            <a href="#booking" class="fleet-action-btn">Book Executive Van</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="service-matrix-section">
+    <div class="matrix-container">
+        
+        <header class="matrix-header">
+            <h2 class="matrix-title">Premium Car & Limo Services Across MD, VA & DC</h2>
+            <p class="matrix-subtitle">Explore our luxury transportation services in neighboring cities and airports.</p>
+            <div class="matrix-accent"></div>
+        </header>
+
+        <div class="matrix-grid">
+            
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Bethesda Transportation</h4>
+                    <p>Luxury limo & car service</p>
+                    <a href="#" class="matrix-link">Bethesda Limo Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Columbia Transportation</h4>
+                    <p>Premium car service</p>
+                    <a href="#" class="matrix-link">Columbia Limo Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Rockville Transportation</h4>
+                    <p>Executive car service</p>
+                    <a href="#" class="matrix-link">Rockville Car Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Annapolis Transportation</h4>
+                    <p>Airport transfers</p>
+                    <a href="#" class="matrix-link">Annapolis Airport Car Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card highlight-card">
+                    <h4>BWI Airport Service</h4>
+                    <p>Limo & Black Car</p>
+                    <a href="#" class="matrix-link">BWI Limo Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Arlington to BWI</h4>
+                    <p>Arlington VA transfers</p>
+                    <a href="#" class="matrix-link">BWI Arlington Car Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Baltimore to BWI</h4>
+                    <p>Downtown to BWI Airport</p>
+                    <a href="#" class="matrix-link">BWI Baltimore Car Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card highlight-card">
+                    <h4>Dulles Airport Service</h4>
+                    <p>Limo service to IAD</p>
+                    <a href="#" class="matrix-link">Dulles Limo Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Ellicott City</h4>
+                    <p>Premium car service</p>
+                    <a href="#" class="matrix-link">Ellicott City Car Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Frederick</h4>
+                    <p>Luxury limo service</p>
+                    <a href="#" class="matrix-link">Frederick Limo Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Germantown</h4>
+                    <p>Airport limo service</p>
+                    <a href="#" class="matrix-link">Germantown Airport Limo →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Gaithersburg</h4>
+                    <p>Airport limo service</p>
+                    <a href="#" class="matrix-link">Gaithersburg Airport Limo →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>York, PA to BWI</h4>
+                    <p>PA to MD transportation</p>
+                    <a href="#" class="matrix-link">York PA BWI Car Service →</a>
+                </div>
+            </div>
+
+            <div class="matrix-item">
+                <div class="matrix-card">
+                    <h4>Annapolis to DC/VA</h4>
+                    <p>DCA, IAD Transfers</p>
+                    <a href="#" class="matrix-link">Annapolis Limo and Car Service →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="matrix-footer">
+            <p>Serving Maryland, Virginia, Pennsylvania, and Washington DC with premium transportation since 2010.</p>
+            <a href="#" class="view-all-btn">View All Services</a>
+        </footer>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-grid">
+            
+            <div class="contact-info">
+                <span class="tag">Support Center</span>
+                <h2>Get In Touch</h2>
+                <p>Have questions? Our 24/7 dispatch team is ready to assist you with your luxury travel needs.</p>
+                
+                <div class="contact-methods">
+                    <div class="method-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>(410) 365-5556</span>
+                    </div>
+                    <div class="method-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>chriskbonsu@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-success">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+                
+                <form method="POST" action="{% url 'index' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="form_type" value="contact_form">
+                    
+                    <div class="input-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" name="phone" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" rows="4" placeholder="How can we help?"></textarea>
+                    
+                    <button type="submit" class="contact-btn">Send Message</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</section>
+{% endblock content %}

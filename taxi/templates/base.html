@@ -30,6 +30,7 @@
     <link href="{% static 'css/bwi.css' %}" rel="stylesheet">
     <link href="{% static 'css/dca.css' %}" rel="stylesheet">
     <link href="{% static 'css/fleet.css' %}" rel="stylesheet">
+    <link href="{% static 'css/cities.css' %}" rel="stylesheet">
 
     {% block extra_head %}{% endblock %}
 </head>
@@ -56,23 +57,6 @@
             <i class="fa-solid fa-phone"></i>
             <span>Call us: <strong>(410) 365-5556</strong></span>
         </div>
-
-        <div class="auth-actions">
-            <a href="#" class="nav-link">
-                <i class="fa-solid fa-hotel"></i>
-                <span>Hotel Login</span>
-            </a>
-
-            <a href="#" class="nav-link">
-                <i class="fa-solid fa-right-to-bracket"></i>
-                <span>Login</span>
-            </a>
-
-            <a href="#" class="nav-link signup-link">
-                <i class="fa-solid fa-user-plus"></i>
-                <span>Sign Up</span>
-            </a>
-        </div>
     </div>
 </div>
 <!-- Topbar End -->
@@ -90,13 +74,10 @@
         <ul class="nav-list" id="nav-list">
             <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">HOME</a></li>
             <li class="nav-item"><a href="{% url 'make_reservation' %}" class="nav-link">RESERVATION</a></li>
-            <li class="nav-item"><a href="#pricing" class="nav-link">PRICING</a></li>
+            <!--<li class="nav-item"><a href="#pricing" class="nav-link">PRICING</a></li>-->
             <li class="nav-item"><a href="#services" class="nav-link">SERVICES</a></li>
-            <li class="nav-item"><a href="#cities" class="nav-link">CITIES</a></li>
+            <li class="nav-item"><a href="{% url 'cities_served' %}" class="nav-link">CITIES</a></li>
             <li class="nav-item"><a href="#fleet" class="nav-link">FLEET</a></li>
-            <li class="nav-item"><a href="#clients" class="nav-link">OUR CLIENTS</a></li>
-            <li class="nav-item"><a href="#jobs" class="nav-link">JOBS</a></li>
-            <li class="nav-item"><a href="#hotels" class="nav-link">HOTELS</a></li>
             <li class="nav-item"><a href="#blog" class="nav-link">BLOG</a></li>
         </ul>
     </div>
@@ -104,9 +85,9 @@
     <!-- Navbar End -->
 
     <!-- Main Content -->
-    <main class="site-content container">
-        {% block content %}
-        {% endblock %}
+    <main class="site-content" style="width: 100%; min-height: 100vh; margin: 0; padding: 0;">
+    {% block content %}
+    {% endblock %}
     </main>
     <!-- Main Content End -->
 

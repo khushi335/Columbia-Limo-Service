@@ -104,55 +104,6 @@
     font-size: 19px;
 }
 
-/* ACTION LINKS */
-.auth-actions {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 0;
-    transition: 0.3s ease;
-    position: relative;
-}
-
-/* Underline animation */
-.nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background: #1e4ed8;
-    transition: 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-.nav-link i {
-    font-size: 16px;
-    color: #1e4ed8;
-}
-
-.signup-link {
-    font-weight: 600;
-}
-
-.nav-link:hover {
-    color: #1e4ed8;
-}
-
 /* -----------------------------------------------------------
    RESPONSIVE DESIGN
    ----------------------------------------------------------- */
@@ -227,7 +178,7 @@
     position: sticky;
     top: 105px; 
     width: 100%;
-    background: #1a1f36; /* Dark navy */
+    background: #44362F; /* Dark navy */
     z-index: 9998; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     transition: top 0.3s ease, background 0.3s ease;
@@ -253,7 +204,7 @@
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 60px;
     align-items: center;
 }
 
@@ -261,7 +212,7 @@
 .nav-link {
     text-decoration: none;
     color: #fff;
-    font-size: 14px; 
+    font-size: 17px; 
     font-weight: 600;
     text-transform: uppercase;
     position: relative;

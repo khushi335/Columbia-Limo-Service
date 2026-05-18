@@ -172,3 +172,22 @@ def make_reservation(request):
 
 def reservation_success(request):
     return render(request, 'taxi/success.html')
+    
+def cities_served(request):
+    context = {
+        'maryland_cities': [
+            'Baltimore', 'Annapolis', 'Columbia', 'Frederick', 'Rockville', 
+            'Gaithersburg', 'Bethesda', 'Silver Spring', 'Towson', 'Bowie', 
+            'Ellicott City', 'Easton', 'Hagerstown', 'Ocean City', 'Salisbury', 
+            'Laurel', 'Greenbelt', 'College Park'
+        ],
+        'dc_neighborhoods': [
+            'Downtown DC', 'Capitol Hill', 'Georgetown', 'Dupont Circle', 
+            'Foggy Bottom', 'Adams Morgan', 'Navy Yard', 'NoMa'
+        ],
+        'virginia_cities': [
+            'Arlington', 'Alexandria', 'McLean', 'Tysons Corner', 
+            'Reston', 'Herndon', 'Fairfax', 'Springfield'
+        ]
+    }
+    return render(request, 'taxi/cities.html', context)
